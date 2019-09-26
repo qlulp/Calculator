@@ -6,17 +6,25 @@
 	</head>
 	
 	<style>
+		
+		button {
+			font-size: 30px;
+		}
 	
 		ul {
+			width: 360px;
 			margin: 0px;
-			padding: 0px;
+			padding: 20px;
+			background-color: #2f2f2f;
+			border-radius: 10px;
 		}
 		
 		input {
 			margin: 0px;
 			padding: 0px;
 			margin-bottom: 8px;
-			width: 134px;
+			width: 214px;
+			height: 20px;
 		}
 		
 		ul li {
@@ -24,17 +32,80 @@
 		}
 		
 		button {
-			width: 30px;
-			margin: 1px;
+			width: 80px;
+			height: 80px;
+			margin: 3px;
 			padding: 4px;
-			background-color: #f7f7f7;
-			border: none;
 			outline: none;
+			border-radius: 50%;
+			border-style: none;
 		}
 		
-		button:hover {
+		.num:hover {
 			background-color: black;
 			color: white;
+			border: 1px solid white;
+		}
+		
+		.num {
+			background: #ffffff;
+		}
+		
+		.equal {
+			background: linear-gradient(45deg, #1eff62, #26b188);
+		}
+		
+		.equal:hover {
+			border: 2px solid white;
+			color: white;
+		}
+		
+		.clear {
+			background-color: #edeced;
+		}
+		
+		.clear:hover {
+			background-color: #e12b64;
+			border: 2px solid white;
+			color: white;
+		}
+		
+		.sign {
+			background-color: #f7c763;
+		}
+		
+		.sign:hover {
+			border: 2px solid white;
+			color: white;
+		}
+		
+		.info {
+			height: 90px;
+			text-align: right;
+			background-color: white;
+			margin-bottom: 20px;
+			padding: 10px;
+			border-radius: 10px;
+		}
+		
+		#result {
+			height: 50px;
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		
+		.problem {
+			height: 20px;
+		}
+		
+		input {
+			background-color: white;
+			border: none;
+			outline: none;
+			margin: 2px;
+			
+			text-align: right;
+			width: 340px;
 		}
 	</style>
 	
@@ -42,31 +113,34 @@
 		<main align="center">
 			<ul>
 				<li>
-					<input id="result">
+					<div class="info">
+						<input type="digits" readonly id="result">
+						<input readonly id="problem">
+					</div>
 				</li>
 				<li>
-					<button onclick="addNum(7);">7</button>
-					<button onclick="addNum(8);">8</button>
-					<button onclick="addNum(9);">9</button>
-					<button onclick="signSelector('+');">+</button>
+					<button class="num" onclick="addNum(7);">7</button>
+					<button class="num" onclick="addNum(8);">8</button>
+					<button class="num" onclick="addNum(9);">9</button>
+					<button class="sign" onclick="signSelector('+');">+</button>
 				</li>
 				<li>
-					<button onclick="addNum(4);">4</button>
-					<button onclick="addNum(5);">5</button>
-					<button onclick="addNum(6);">6</button>
-					<button onclick="signSelector('-');">-</button>
+					<button class="num" onclick="addNum(4);">4</button>
+					<button class="num" onclick="addNum(5);">5</button>
+					<button class="num" onclick="addNum(6);">6</button>
+					<button class="sign" onclick="signSelector('-');">-</button>
 				</li>
 				<li>
-					<button onclick="addNum(1);">1</button>
-					<button onclick="addNum(2);">2</button>
-					<button onclick="addNum(3);">3</button>
-					<button onclick="signSelector('*');">*</button>
+					<button class="num" onclick="addNum(1);">1</button>
+					<button class="num" onclick="addNum(2);">2</button>
+					<button class="num" onclick="addNum(3);">3</button>
+					<button class="sign" onclick="signSelector('*');">*</button>
 				</li>
 				<li>
-					<button onclick="clearRes();">C</button>
-					<button onclick="addNum(0);">0</button>
-					<button onclick="compute();">=</button>
-					<button onclick="signSelector('/');">/</button>
+					<button class="clear" onclick="clearRes();">C</button>
+					<button class="num" onclick="addNum(0);">0</button>
+					<button class="equal" onclick="compute();">=</button>
+					<button class="sign" onclick="signSelector('/');">/</button>
 				</li>
 			
 			</uL>

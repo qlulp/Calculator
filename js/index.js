@@ -1,6 +1,7 @@
 var result = document.getElementById("result");
 var num1, num2;
 var sign = "";
+var problem = document.getElementById("problem");
 
 function addNum(num)
 {
@@ -9,6 +10,8 @@ function addNum(num)
 
 function clearRes()
 {
+	if (result.value == "")
+		problem.value = "";
 	result.value = "";
 }
 
@@ -19,6 +22,7 @@ function signSelector(mark)
 		num1 = result.value;
 		sign = mark;
 		clearRes();
+		problem.value = num1 + " " + sign + " ";
 	}
 }
 
@@ -47,6 +51,7 @@ function compute()
 					result.value = parseint(num1) / parseint(num2);
 			break;
 		}
+		problem.value = problem.value + num2 +" = " + result.value;
 	}
 }
 
