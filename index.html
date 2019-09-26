@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calc</title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<style>
+	
+		ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		input {
+			margin: 0px;
+			padding: 0px;
+			margin-bottom: 8px;
+			width: 134px;
+		}
+		
+		ul li {
+			list-style: none;
+		}
+		
+		button {
+			width: 30px;
+			margin: 1px;
+			padding: 4px;
+			background-color: #f7f7f7;
+			border: none;
+			outline: none;
+		}
+		
+		button:hover {
+			background-color: black;
+			color: white;
+		}
+	</style>
+	
+	<body>
+		<main align="center">
+			<ul>
+				<li>
+					<input id="result">
+				</li>
+				<li>
+					<button onclick="addNum(7);">7</button>
+					<button onclick="addNum(8);">8</button>
+					<button onclick="addNum(9);">9</button>
+					<button onclick="signSelector('+');">+</button>
+				</li>
+				<li>
+					<button onclick="addNum(4);">4</button>
+					<button onclick="addNum(5);">5</button>
+					<button onclick="addNum(6);">6</button>
+					<button onclick="signSelector('-');">-</button>
+				</li>
+				<li>
+					<button onclick="addNum(1);">1</button>
+					<button onclick="addNum(2);">2</button>
+					<button onclick="addNum(3);">3</button>
+					<button onclick="signSelector('*');">*</button>
+				</li>
+				<li>
+					<button onclick="clearRes();">C</button>
+					<button onclick="addNum(0);">0</button>
+					<button onclick="compute();">=</button>
+					<button onclick="signSelector('/');">/</button>
+				</li>
+			
+			</uL>
+		</main>
+		
+		<script src="js/index.js"></script>
+	</body>
+</html>
