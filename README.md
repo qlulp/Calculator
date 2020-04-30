@@ -1,3 +1,2 @@
 # Calculator
-Link
 Without dividing
